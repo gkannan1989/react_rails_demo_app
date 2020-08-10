@@ -1,0 +1,29 @@
+<h1>Add a New Event!</h1>
+
+<%= form_with model: @event, class: "nifty_form" do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <br />
+
+  <div>
+    <%= f.label :planner %>
+    <%= f.select :planner, options_for_select([['Adam', '1'], ['Beatrice', 2], ['Carrie', 3]]), {include_blank: 'Choose one'} %>
+  </div>
+
+  <br />
+
+  <div>
+    <%= f.label :date%>
+    <%= f.date_field :date %>
+  </div>
+
+  <br />
+
+  <%= react_component("Hello", { name: "Sponge Bob"}) %>
+
+
+  <%= f.submit "Create" %>
+<% end %>
