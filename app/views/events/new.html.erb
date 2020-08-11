@@ -22,8 +22,12 @@
 
   <br />
 
-  <%= react_component("Hello", { name: "Sponge Bob"}) %>
+  <div>
+    <%= f.label :even_type %>
+    <%= react_component( "MultiselectTree", @event_data ) %>
+  </div>
 
+  <br />
 
   <%= f.submit "Create" %>
 <% end %>
